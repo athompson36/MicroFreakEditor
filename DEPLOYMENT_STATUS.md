@@ -44,7 +44,8 @@
 - ✅ Testing MIDI functionality
 
 ### Next Steps (See NEXT_STEPS.md)
-- [ ] App Store Connect app creation
+- [x] GitHub Actions CI (`.github/workflows/ci.yml`)
+- [ ] App Store Connect app creation (see APP_STORE_CONNECT.md)
 - [ ] Screenshots & metadata preparation
 - [ ] TestFlight setup
 - [ ] Archive & export for distribution

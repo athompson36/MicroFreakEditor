@@ -59,6 +59,8 @@ xcodebuild -scheme MicroFreakEditor_iOS -destination 'platform=iOS Simulator,nam
 
 ### App Store Connect Setup
 
+See **[APP_STORE_CONNECT.md](./APP_STORE_CONNECT.md)** for the full checklist.
+
 1. **Create App Record:**
    - Go to [App Store Connect](https://appstoreconnect.apple.com)
    - Create new app: "MicroFreak Editor"
@@ -105,35 +107,16 @@ xcodebuild -exportArchive -archivePath build/MicroFreakEditor-iOS.xcarchive -exp
 3. Submit for Beta App Review (first external test build)
 4. Test on real devices before App Store submission
 
-## 🚀 Optional: CI/CD Setup
+## ✅ CI/CD Setup (Done)
 
-### GitHub Actions (Recommended)
+### GitHub Actions
 
-Create `.github/workflows/ci.yml`:
+`.github/workflows/ci.yml` runs on every push/PR to `main`:
+- Installs XcodeGen and generates the Xcode project
+- Builds **MicroFreakEditor_macOS** (Debug)
+- Builds **MicroFreakEditor_iOS** for iPad Simulator (Debug)
 
-```yaml
-name: CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: macos-14
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install XcodeGen
-        run: brew install xcodegen
-      - name: Generate Xcode Project
-        run: xcodegen generate
-      - name: Build macOS
-        run: xcodebuild -scheme MicroFreakEditor_macOS -destination 'platform=macOS' -configuration Debug build
-      - name: Build iOS
-        run: xcodebuild -scheme MicroFreakEditor_iOS -destination 'generic/platform=iOS' -configuration Debug build
-```
+If iOS build fails in CI (e.g. signing), it may be due to no development team on the runner; macOS build still validates the project.
 
 ### Xcode Cloud
 
