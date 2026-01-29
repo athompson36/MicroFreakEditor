@@ -1,0 +1,17 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+
+# macOS
+.DS_Store
+
+# Secrets / provisioning (if stored locally)
+*.mobileprovision
+*.p12
+ExportOptions.plist
+fastlane/report.xml
+fastlane/Preview.html

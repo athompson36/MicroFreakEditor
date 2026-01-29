@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Network MIDI capability (if you add Network MIDI support later) -->
+	<!-- Uncomment and configure in Xcode if needed:
+	<key>com.apple.developer.networking.networkextension</key>
+	<array>
+		<string>networkextension</string>
+	</array>
+	-->
+</dict>
+</plist>
