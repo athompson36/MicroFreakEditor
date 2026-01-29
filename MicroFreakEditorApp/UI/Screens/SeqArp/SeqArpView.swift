@@ -18,7 +18,7 @@ struct SeqArpView: View {
                     paramIds: ParameterRegistry.params(forSection: "LFO").map(\.id),
                     isCompact: app.isCompactMode
                 )
-                stepGridPlaceholder
+                stepGridCard
             }
             .padding(12)
         }
@@ -36,17 +36,63 @@ struct SeqArpView: View {
         .overlay(RoundedRectangle(cornerRadius: Theme.corner).stroke(Theme.stroke(scheme)))
     }
 
-    private var stepGridPlaceholder: some View {
+    private var stepGridCard: some View {
         VStack(alignment: .leading, spacing: 10) {
             SectionHeader(title: "Step Grid (App Mode)")
-            Text("Step sequencer and pattern editor coming in a future update.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .padding(12)
+            Text("Tap steps to toggle. Internal clock and MIDI sync in a future update.")
+                .font(.caption)
+                .foregroundStyle(.tertiary)
+            StepGridView()
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: Theme.corner).fill(Theme.cardBackground(scheme)))
         .overlay(RoundedRectangle(cornerRadius: Theme.corner).stroke(Theme.stroke(scheme)))
+    }
+}
+
+// MARK: - Step grid (16 steps, one lane)
+
+private struct StepGridView: View {
+    @EnvironmentObject private var app: AppState
+    @Environment(\.colorScheme) private var scheme
+
+    private let columns = Array(repeating: GridItem(.flexible(minimum: 24), spacing: 6), count: 16)
+
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: 6) {
+            ForEach(Array(app.stepPattern.steps.enumerated()), id: \.offset) { index, step in
+                StepCell(
+                    stepNumber: index + 1,
+                    isOn: step.gate,
+                    onTap: { app.stepPattern.toggleStep(at: index) }
+                )
+            }
+        }
+    }
+}
+
+private struct StepCell: View {
+    let stepNumber: Int
+    let isOn: Bool
+    let onTap: () -> Void
+    @Environment(\.colorScheme) private var scheme
+
+    var body: some View {
+        Button(action: onTap) {
+            Text("\(stepNumber)")
+                .font(.system(.caption2, design: .monospaced))
+                .frame(minWidth: 28, minHeight: 28)
+                .background(
+                    RoundedRectangle(cornerRadius: 6)
+                        .fill(isOn ? Theme.stroke(scheme) : Theme.cardBackground(scheme).opacity(0.8))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .stroke(Theme.stroke(scheme), lineWidth: isOn ? 0 : 1)
+                )
+                .foregroundStyle(isOn ? Color.primary : .secondary)
+        }
+        .buttonStyle(.plain)
     }
 }

@@ -125,7 +125,7 @@ struct PresetsView: View {
         do {
             if let model = try PresetStore.load(name: name) {
                 app.microFreak = model
-                // Optionally send all params to synth (full dump) — for v1 we just update UI
+                app.sendCurrentStateToSynth()
             } else {
                 loadError = "Preset not found."
             }

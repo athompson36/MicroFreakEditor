@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024F659295C7F0A638BA0839 /* StepPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD181D2ABE8CB0A01065ED /* StepPattern.swift */; };
 		0ABA41884538B5DA63A6408F /* SeqArpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97588FE457AFEB4400345932 /* SeqArpView.swift */; };
 		0C6F5860BE7C8C356F731E04 /* SeqArpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97588FE457AFEB4400345932 /* SeqArpView.swift */; };
 		1C8AE15E61B485AE9DB9E806 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23D1EF4E66E90FA276543A5 /* Theme.swift */; };
@@ -29,6 +30,7 @@
 		70087D73075C72BC3E27BAF1 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B08EC2FBF0660DC2D5CAD6 /* Knob.swift */; };
 		717857C3F814B3A168D3FE3A /* ModMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */; };
 		75946A54C495B03E54031C1E /* ParamKnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F62E3A55E743B842AB4E61 /* ParamKnobView.swift */; };
+		7B49A01622A5B682388D2792 /* ModMatrixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6255998745003FBAACA43 /* ModMatrixModel.swift */; };
 		7C97B9A1B86D36A0D374338C /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387436CD3CCAA9DFB1256DDF /* PresetsView.swift */; };
 		7CCDF698CF52A626E41B98D9 /* MidiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1059A6DDF3AE804B2C8E98 /* MidiManager.swift */; };
 		811021F1B7696418F153FF65 /* CCMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6A5BAC86B7578BD0EF832 /* CCMapper.swift */; };
@@ -44,6 +46,8 @@
 		A72589EBA87BB354AEDE11C8 /* MicroFreakEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D031D31381585ECFC5ADABA /* MicroFreakEditorApp.swift */; };
 		B02A56CBADE164AE049D058C /* ParamSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24C2A8EF64363CAAC1F897 /* ParamSectionCard.swift */; };
 		B5AD7538B125F57293DAF342 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387436CD3CCAA9DFB1256DDF /* PresetsView.swift */; };
+		BE2168F552AF3501CD2DA68A /* StepPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DD181D2ABE8CB0A01065ED /* StepPattern.swift */; };
+		C32126D18778C6A50370931F /* ModMatrixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6255998745003FBAACA43 /* ModMatrixModel.swift */; };
 		C4FC8C9E9B5FE6E9BEC236C6 /* ModMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */; };
 		D3EAC29E78E01021164D4377 /* MicroFreakParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450BB2CD813AD19477D9AA9A /* MicroFreakParameter.swift */; };
 		DB9476A1A5D7644E60E00F71 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F55507520797A7258D355 /* AppState.swift */; };
@@ -60,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DD181D2ABE8CB0A01065ED /* StepPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPattern.swift; sourceTree = "<group>"; };
 		08D28F5BDF8285453BA89216 /* MicroFreakEditor-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MicroFreakEditor-macOS.entitlements"; sourceTree = "<group>"; };
 		123C7478B9D6C00789494430 /* OscView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscView.swift; sourceTree = "<group>"; };
 		308F55507520797A7258D355 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -76,13 +81,14 @@
 		56EEC4A8E8B4BC0BB545F36C /* FilterAmpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAmpView.swift; sourceTree = "<group>"; };
 		5D40BB86F3BEE2185EB9A739 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		647A742108341CE01F40261D /* DetailHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHost.swift; sourceTree = "<group>"; };
+		7AE6255998745003FBAACA43 /* ModMatrixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModMatrixModel.swift; sourceTree = "<group>"; };
 		97037681F112F8FE3C965CA1 /* NRPNMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPNMapper.swift; sourceTree = "<group>"; };
 		97588FE457AFEB4400345932 /* SeqArpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeqArpView.swift; sourceTree = "<group>"; };
 		9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterRegistry.swift; sourceTree = "<group>"; };
 		B6B08EC2FBF0660DC2D5CAD6 /* Knob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 		BC683B5AA89E7AEAC47FF485 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		C1CEF454C92575FCE30D07E8 /* PresetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStore.swift; sourceTree = "<group>"; };
-		C4E576794332B6E92A78C657 /* MicroFreakEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroFreakEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E576794332B6E92A78C657 /* MicroFreakEditor.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MicroFreakEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEB5CA8F2D32FACD4CCFCCE /* MicroFreakEditor-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MicroFreakEditor-iOS.entitlements"; sourceTree = "<group>"; };
 		D23D1EF4E66E90FA276543A5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModMatrixView.swift; sourceTree = "<group>"; };
@@ -154,6 +160,14 @@
 			path = MicroFreakEditorApp;
 			sourceTree = "<group>";
 		};
+		2B6CBD1E6BC5D3D894017A65 /* SeqArp */ = {
+			isa = PBXGroup;
+			children = (
+				04DD181D2ABE8CB0A01065ED /* StepPattern.swift */,
+			);
+			path = SeqArp;
+			sourceTree = "<group>";
+		};
 		2E598C837597A01DE763BCF6 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +192,14 @@
 				9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */,
 			);
 			path = MicroFreak;
+			sourceTree = "<group>";
+		};
+		5DE4DDD07A7F4DE1A5F9E24E /* ModMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6255998745003FBAACA43 /* ModMatrixModel.swift */,
+			);
+			path = ModMatrix;
 			sourceTree = "<group>";
 		};
 		63B320ADC37321AFEFA25AB5 /* Presets */ = {
@@ -297,7 +319,9 @@
 			isa = PBXGroup;
 			children = (
 				3C10547B88E5ADE910351244 /* MicroFreak */,
+				5DE4DDD07A7F4DE1A5F9E24E /* ModMatrix */,
 				63B320ADC37321AFEFA25AB5 /* Presets */,
+				2B6CBD1E6BC5D3D894017A65 /* SeqArp */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -364,6 +388,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					0470183D416EB7AC21DE518B = {
+						DevelopmentTeam = FH4FKB9AUS;
+					};
+					3D68C265B4E131709DE49129 = {
+						DevelopmentTeam = FH4FKB9AUS;
+					};
+				};
 			};
 			buildConfigurationList = D5507E1B52B4B53518ACDBB6 /* Build configuration list for PBXProject "MicroFreakEditor" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -375,6 +407,7 @@
 			);
 			mainGroup = A011F6519F13F4C344BB6156;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -400,6 +433,7 @@
 				8DF925445D45909080C22FDD /* MicroFreakParameter.swift in Sources */,
 				9A760682B4E41CD29CAD8D75 /* MidiManager.swift in Sources */,
 				33341BCFC4334F561C68A49E /* MidiSettingsView.swift in Sources */,
+				C32126D18778C6A50370931F /* ModMatrixModel.swift in Sources */,
 				717857C3F814B3A168D3FE3A /* ModMatrixView.swift in Sources */,
 				DF02040D6F9A2602C6B11C05 /* NRPNMapper.swift in Sources */,
 				E2F7BA4BD14D37240DC44896 /* NavigationRouter.swift in Sources */,
@@ -413,6 +447,7 @@
 				352EBD596945C92F87543FD7 /* RootView.swift in Sources */,
 				34488620EE663FA4EBE79A9E /* SectionHeader.swift in Sources */,
 				0ABA41884538B5DA63A6408F /* SeqArpView.swift in Sources */,
+				024F659295C7F0A638BA0839 /* StepPattern.swift in Sources */,
 				1C8AE15E61B485AE9DB9E806 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +467,7 @@
 				D3EAC29E78E01021164D4377 /* MicroFreakParameter.swift in Sources */,
 				7CCDF698CF52A626E41B98D9 /* MidiManager.swift in Sources */,
 				51FBEA1264FCD80002320FA0 /* MidiSettingsView.swift in Sources */,
+				7B49A01622A5B682388D2792 /* ModMatrixModel.swift in Sources */,
 				C4FC8C9E9B5FE6E9BEC236C6 /* ModMatrixView.swift in Sources */,
 				EA622ED8DDB4432A4D1863D7 /* NRPNMapper.swift in Sources */,
 				F22E53D66023DEB9737B00BD /* NavigationRouter.swift in Sources */,
@@ -445,6 +481,7 @@
 				5B9A148A3C9A43E700231418 /* RootView.swift in Sources */,
 				90E996ADB48E76B72B83F617 /* SectionHeader.swift in Sources */,
 				0C6F5860BE7C8C356F731E04 /* SeqArpView.swift in Sources */,
+				BE2168F552AF3501CD2DA68A /* StepPattern.swift in Sources */,
 				56542B5ACE9A4176DCC3095A /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +583,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4FKB9AUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MicroFreak Editor";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -651,6 +689,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FH4FKB9AUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MicroFreak Editor";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;

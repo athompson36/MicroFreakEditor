@@ -194,6 +194,22 @@ enum ParameterRegistry {
         Dictionary(uniqueKeysWithValues: all.map { ($0.id, $0) })
     }()
 
+    /// Lookup param id by CC (channel, number) for incoming MIDI.
+    static let ccLookup: [String: String] = {
+        var dict: [String: String] = [:]
+        for p in all {
+            if case .cc(let ch, let cc) = p.mapping {
+                dict["\(ch)_\(cc)"] = p.id
+            }
+        }
+        return dict
+    }()
+
+    /// Param id for incoming CC, or nil if unknown.
+    static func paramId(ccChannel channel: UInt8, ccNumber number: UInt8) -> String? {
+        ccLookup["\(channel)_\(number)"]
+    }
+
     /// Parameters for a given section (e.g. "Filter", "Oscillator").
     static func params(forSection section: String) -> [MicroFreakParameter] {
         all.filter { $0.section == section }

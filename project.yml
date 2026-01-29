@@ -32,6 +32,7 @@ targets:
       TARGETED_DEVICE_FAMILY: "2"
     settings:
       base:
+        DEVELOPMENT_TEAM: FH4FKB9AUS
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.microfreakeditor.MicroFreakEditor
         MARKETING_VERSION: "1.0.0"

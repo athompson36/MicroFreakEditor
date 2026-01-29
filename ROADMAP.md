@@ -18,7 +18,7 @@
 - Drag/drop modulation creation
 
 ## Milestone 4 — Seq/Arp Grid (App Mode)
-- Step grid + lanes
+- ~~Step grid + lanes~~ (one lane, 16 steps; tap to toggle)
 - Internal clock + MIDI clock in/out
 - Pattern save/recall
 

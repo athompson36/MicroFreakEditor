@@ -9,8 +9,8 @@
 | **Perform** | Quick controls: Glide, Filter Cutoff/Resonance, Amp Level, Keyboard Spice. Compact vs touch layout. |
 | **Osc** | Oscillator: Type, Wave, Timbre, Shape. All mapped to MicroFreak CC. |
 | **Filter+Amp** | Filter (Cutoff, Resonance), Amp (Level), Cycling Envelope (Rise, Fall, Hold, Amount), Envelope (Attack, Decay, Sustain, Filter Amount). |
-| **Mod** | Mod Matrix placeholder; drag/drop and mod rings planned for a future update. |
-| **Seq/Arp** | Arp/Seq rate (free + sync), LFO rate (free + sync). Step grid placeholder for App Mode sequencer. |
+| **Mod** | Mod Matrix: add/list modulation routes (Source → Destination + amount). Local state only; hardware sync via SysEx planned. |
+| **Seq/Arp** | Arp/Seq rate (free + sync), LFO rate (free + sync). Step grid: 16 steps, one lane, tap to toggle; internal clock and MIDI sync planned. |
 | **Presets** | Save current state as preset (name), list presets, load preset, delete preset. Stored as JSON in Application Support. |
 | **Settings** | MIDI source/destination pickers, connection status, Compact mode toggle, Refresh. |
 
@@ -39,18 +39,19 @@ All MicroFreak CC parameters from [midi.guide](https://midi.guide/d/arturia/micr
 - CoreMIDI discovery, source/destination selection, connection status in UI.
 - CC send on parameter change; NRPN support in mapping layer (used when params use NRPN).
 - MIDI setup change notifications refresh the device list.
+- **Throttling:** CC sends throttled to 25 ms per (channel, cc) to avoid flooding the synth.
+- **Incoming CC:** Parsed and applied to the model so hardware moves update the UI (optimistic sync).
 
 ### Presets
 
 - Save: current parameter state → JSON file in `~/Library/Application Support/MicroFreakEditor/`.
-- Load: replace in-memory model (optionally send full dump to synth in a future update).
+- Load: replace in-memory model and **send full state to synth** (all CCs sent to selected destination).
 - List and delete presets.
 
 ## Planned (roadmap)
 
-- **Mod Matrix:** Mod routes UI, mod rings, drag/drop.
-- **Seq/Arp step grid:** Step sequencer, internal clock, MIDI clock in/out, pattern save/recall.
-- **Presets v2:** Send full parameter dump to synth on load; compare/diff, A/B.
+- **Mod Matrix:** Mod rings visualization, drag/drop; SysEx sync to hardware.
+- **Seq/Arp step grid:** Additional lanes, internal clock, MIDI clock in/out, pattern save/recall.
+- **Presets v2:** Compare/diff, A/B (full dump on load done).
 - **SysEx (best-effort):** Device handshake, partial dump/restore.
-- **Throttling/smoothing:** Parameter throttling and smoothing for MIDI send.
 - **Hardware knob learn:** Optional MIDI learn for parameters.

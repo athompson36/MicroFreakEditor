@@ -14,6 +14,11 @@ final class MidiManager: ObservableObject {
 
     var onReceiveMessage: (([UInt8]) -> Void)?
 
+    /// Throttle: min interval (seconds) per CC key "ch_cc" to avoid flooding.
+    private let throttleInterval: TimeInterval = 0.025
+    private var lastSendTime: [String: CFAbsoluteTime] = [:]
+    private let throttleQueue = DispatchQueue(label: "MidiManager.throttle")
+
     init() {
         setup()
         refreshEndpoints()
@@ -95,6 +100,23 @@ final class MidiManager: ObservableObject {
     func send(_ bytes: [UInt8], to destination: MIDIEndpointRef? = nil) {
         let dest = destination ?? connectedDestination
         guard let dest, dest != 0 else { return }
+
+        // Throttle CC messages (0xB0) per ch_cc
+        if bytes.count >= 3, (bytes[0] & 0xF0) == 0xB0 {
+            let ch = bytes[0] & 0x0F
+            let cc = bytes[1]
+            let key = "\(ch)_\(cc)"
+            var shouldSkip = false
+            throttleQueue.sync {
+                let now = CFAbsoluteTimeGetCurrent()
+                if let last = lastSendTime[key], now - last < throttleInterval {
+                    shouldSkip = true
+                } else {
+                    lastSendTime[key] = now
+                }
+            }
+            if shouldSkip { return }
+        }
 
         let bufferSize = 256
         var buffer = [UInt8](repeating: 0, count: bufferSize)

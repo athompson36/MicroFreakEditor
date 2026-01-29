@@ -8,20 +8,21 @@ The app builds and runs on macOS. Here's what to do next to prepare for deployme
 - [x] Version and build numbers configured (1.0.0 / 1)
 - [x] Entitlements files created for macOS and iOS
 - [x] macOS build verified and app runs
+- [x] Development team set in `project.yml` (`DEVELOPMENT_TEAM: FH4FKB9AUS`) so you don’t have to select “Andrew Martin Thompson” on every build
 
 ## 🔄 Immediate Next Steps
 
 ### 1. Set Up iOS Code Signing
 
-**In Xcode:**
-1. Open `MicroFreakEditor.xcodeproj`
-2. Select the **MicroFreakEditor_iOS** target
-3. Go to **Signing & Capabilities** tab
-4. Check **"Automatically manage signing"**
-5. Select your **Team** (requires Apple Developer account)
-6. Xcode will create/select provisioning profiles automatically
+**Team is already set** in `project.yml` (Team ID `FH4FKB9AUS`). If you run `xcodegen generate`, the team will stay set. To use a different team, edit `project.yml` and change `DEVELOPMENT_TEAM` under the target’s `settings.base`, then run `xcodegen generate`.
 
-**Result:** iOS builds will work for simulator and device.
+**In Xcode (only if needed):**
+1. Open `MicroFreakEditor.xcodeproj`
+2. Select the **MicroFreakEditor_iOS** target (and/or **MicroFreakEditor_macOS**)
+3. Go to **Signing & Capabilities** tab
+4. Confirm **"Automatically manage signing"** is checked and your **Team** is selected
+
+**Result:** iOS and macOS builds will work without re-selecting the team each time.
 
 ### 2. Test iOS Build
 
@@ -52,9 +53,9 @@ xcodebuild -scheme MicroFreakEditor_iOS -destination 'platform=iOS Simulator,nam
 
 ### Code & Configuration
 
-- [ ] Verify all placeholder CC numbers in `ParameterRegistry.swift` are replaced with actual MicroFreak mappings
+- [x] Verify all placeholder CC numbers in `ParameterRegistry.swift` are replaced with actual MicroFreak mappings (aligned with [midi.guide](https://midi.guide/d/arturia/microfreak/))
 - [ ] Test MIDI communication with actual MicroFreak hardware (if available)
-- [ ] Verify no debug/console logs left in production code
+- [x] Verify no debug/console logs left in production code (all prints in `MidiManager` are `#if DEBUG`)
 - [ ] Review and update `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption` if you add encryption
 
 ### App Store Connect Setup
