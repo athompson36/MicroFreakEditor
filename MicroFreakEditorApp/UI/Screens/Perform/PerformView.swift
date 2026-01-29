@@ -61,75 +61,27 @@ struct PerformView: View {
         }
     }
 
-    private var compactGrid: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(title: "Quick Controls")
+    private static let performParamIds = [
+        "mf.general.glide",
+        "mf.filter.cutoff",
+        "mf.filter.resonance",
+        "mf.amp.level",
+        "mf.keyboard.spice",
+    ]
 
-            HStack(alignment: .top, spacing: 12) {
-                paramKnob("mf.filter.cutoff")
-                paramKnob("mf.filter.resonance")
-                paramKnob("mf.amp.level")
-                Spacer()
-            }
-        }
-        .padding(12)
-        .background(RoundedRectangle(cornerRadius: Theme.corner).fill(Theme.cardBackground(scheme)))
-        .overlay(RoundedRectangle(cornerRadius: Theme.corner).stroke(Theme.stroke(scheme)))
+    private var compactGrid: some View {
+        ParamSectionCard(
+            title: "Quick Controls",
+            paramIds: Self.performParamIds,
+            isCompact: true
+        )
     }
 
     private var touchGrid: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            SectionHeader(title: "Quick Controls")
-
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 220), spacing: 12)], spacing: 12) {
-                paramKnob("mf.filter.cutoff")
-                paramKnob("mf.filter.resonance")
-                paramKnob("mf.amp.level")
-            }
-        }
-        .padding(12)
-        .background(RoundedRectangle(cornerRadius: Theme.corner).fill(Theme.cardBackground(scheme)))
-        .overlay(RoundedRectangle(cornerRadius: Theme.corner).stroke(Theme.stroke(scheme)))
-    }
-
-    @ViewBuilder
-    private func paramKnob(_ id: String) -> some View {
-        if let p = ParameterRegistry.byId[id] {
-            let value = app.microFreak.value(for: id)
-            let normalized = p.normalize(value)
-            Knob(
-                label: p.name,
-                valueText: p.format(value),
-                normalizedValue: Binding(
-                    get: { normalized },
-                    set: { newNorm in
-                        let newValue = p.denormalize(newNorm)
-                        app.microFreak.setValue(newValue, for: id)
-                        sendParam(p, value: newValue)
-                    }
-                )
-            )
-        } else {
-            Text("Missing param: \(id)")
-        }
-    }
-
-    private func sendParam(_ p: MicroFreakParameter, value: Double) {
-        switch p.mapping {
-        case .cc(let channel, let number):
-            let scaled = UInt8(min(max(Int(round(p.normalize(value) * 127.0)), 0), 127))
-            let msg = CCMapper.makeCC(channel: channel, number: number, value: scaled)
-            app.midi.send(msg, to: app.deviceSession.selectedDestination)
-
-        case .nrpn(let channel, let parameter):
-            let scaled = UInt16(min(max(Int(round(p.normalize(value) * 16383.0)), 0), 16383))
-            let msgs = NRPNMapper.makeNRPN(channel: channel, parameter: parameter, value14: scaled)
-            for m in msgs {
-                app.midi.send(m, to: app.deviceSession.selectedDestination)
-            }
-
-        case .none:
-            break
-        }
+        ParamSectionCard(
+            title: "Quick Controls",
+            paramIds: Self.performParamIds,
+            isCompact: false
+        )
     }
 }

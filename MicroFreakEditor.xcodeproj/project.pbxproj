@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ABA41884538B5DA63A6408F /* SeqArpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97588FE457AFEB4400345932 /* SeqArpView.swift */; };
+		0C6F5860BE7C8C356F731E04 /* SeqArpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97588FE457AFEB4400345932 /* SeqArpView.swift */; };
 		1C8AE15E61B485AE9DB9E806 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23D1EF4E66E90FA276543A5 /* Theme.swift */; };
+		230CAEBFA6A15A53A66DBF59 /* PresetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEF454C92575FCE30D07E8 /* PresetStore.swift */; };
 		26F92876FD0C2BD29E6DC5B8 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B08EC2FBF0660DC2D5CAD6 /* Knob.swift */; };
 		2960D32D8A0B163DD295A997 /* DeviceSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FC155F1FFE631FD6EAE0BB /* DeviceSession.swift */; };
+		2E10A16FAB421AD6A3125F2B /* PresetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CEF454C92575FCE30D07E8 /* PresetStore.swift */; };
 		2E69F8661988DC11A0442DA6 /* PerformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3837A8C8A61DB0D78911822E /* PerformView.swift */; };
 		33341BCFC4334F561C68A49E /* MidiSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDBAD648509D0E87EE258FE /* MidiSettingsView.swift */; };
+		33973CFB88C891A048983931 /* FilterAmpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEC4A8E8B4BC0BB545F36C /* FilterAmpView.swift */; };
 		34488620EE663FA4EBE79A9E /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191EC47714EAA87C537614F /* SectionHeader.swift */; };
 		352EBD596945C92F87543FD7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40BB86F3BEE2185EB9A739 /* RootView.swift */; };
 		390962A89DE378036C106A23 /* MicroFreakModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D920396FC6F228CC9CD4E3A /* MicroFreakModel.swift */; };
@@ -20,9 +25,14 @@
 		55317D5263511F375EF192DE /* ParameterRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */; };
 		56542B5ACE9A4176DCC3095A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23D1EF4E66E90FA276543A5 /* Theme.swift */; };
 		5B9A148A3C9A43E700231418 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40BB86F3BEE2185EB9A739 /* RootView.swift */; };
+		6F047691DA847B97476E5F74 /* OscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123C7478B9D6C00789494430 /* OscView.swift */; };
 		70087D73075C72BC3E27BAF1 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B08EC2FBF0660DC2D5CAD6 /* Knob.swift */; };
+		717857C3F814B3A168D3FE3A /* ModMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */; };
+		75946A54C495B03E54031C1E /* ParamKnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F62E3A55E743B842AB4E61 /* ParamKnobView.swift */; };
+		7C97B9A1B86D36A0D374338C /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387436CD3CCAA9DFB1256DDF /* PresetsView.swift */; };
 		7CCDF698CF52A626E41B98D9 /* MidiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1059A6DDF3AE804B2C8E98 /* MidiManager.swift */; };
 		811021F1B7696418F153FF65 /* CCMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB6A5BAC86B7578BD0EF832 /* CCMapper.swift */; };
+		86478E8120BBA9CC4F580BE4 /* OscView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123C7478B9D6C00789494430 /* OscView.swift */; };
 		88D3CDF8B5F75A9C29BEA960 /* MicroFreakModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D920396FC6F228CC9CD4E3A /* MicroFreakModel.swift */; };
 		8DF925445D45909080C22FDD /* MicroFreakParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450BB2CD813AD19477D9AA9A /* MicroFreakParameter.swift */; };
 		90E996ADB48E76B72B83F617 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191EC47714EAA87C537614F /* SectionHeader.swift */; };
@@ -30,7 +40,11 @@
 		96643039C301573889BD8EC0 /* ParameterRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */; };
 		9A760682B4E41CD29CAD8D75 /* MidiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1059A6DDF3AE804B2C8E98 /* MidiManager.swift */; };
 		9C5296FE117C8216BF3B9CC4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F55507520797A7258D355 /* AppState.swift */; };
+		9F936A9DC577FEB11F5B2C11 /* FilterAmpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEC4A8E8B4BC0BB545F36C /* FilterAmpView.swift */; };
 		A72589EBA87BB354AEDE11C8 /* MicroFreakEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D031D31381585ECFC5ADABA /* MicroFreakEditorApp.swift */; };
+		B02A56CBADE164AE049D058C /* ParamSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24C2A8EF64363CAAC1F897 /* ParamSectionCard.swift */; };
+		B5AD7538B125F57293DAF342 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387436CD3CCAA9DFB1256DDF /* PresetsView.swift */; };
+		C4FC8C9E9B5FE6E9BEC236C6 /* ModMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */; };
 		D3EAC29E78E01021164D4377 /* MicroFreakParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450BB2CD813AD19477D9AA9A /* MicroFreakParameter.swift */; };
 		DB9476A1A5D7644E60E00F71 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308F55507520797A7258D355 /* AppState.swift */; };
 		DD00ED4903895F2DB3FB8DCC /* DetailHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A742108341CE01F40261D /* DetailHost.swift */; };
@@ -40,38 +54,61 @@
 		EA093BD31B06CE70A4A4065A /* DetailHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647A742108341CE01F40261D /* DetailHost.swift */; };
 		EA622ED8DDB4432A4D1863D7 /* NRPNMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97037681F112F8FE3C965CA1 /* NRPNMapper.swift */; };
 		F22E53D66023DEB9737B00BD /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC683B5AA89E7AEAC47FF485 /* NavigationRouter.swift */; };
+		F33F3BBD1E9606FDB38B9D5E /* ParamSectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24C2A8EF64363CAAC1F897 /* ParamSectionCard.swift */; };
+		F9A5045006FBB5BFD01AF8BA /* ParamKnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F62E3A55E743B842AB4E61 /* ParamKnobView.swift */; };
 		FF3965DABD96F87EA57BCCCF /* MicroFreakEditorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D031D31381585ECFC5ADABA /* MicroFreakEditorApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		08D28F5BDF8285453BA89216 /* MicroFreakEditor-macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MicroFreakEditor-macOS.entitlements"; sourceTree = "<group>"; };
+		123C7478B9D6C00789494430 /* OscView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscView.swift; sourceTree = "<group>"; };
 		308F55507520797A7258D355 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		34F62E3A55E743B842AB4E61 /* ParamKnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamKnobView.swift; sourceTree = "<group>"; };
 		3837A8C8A61DB0D78911822E /* PerformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformView.swift; sourceTree = "<group>"; };
+		387436CD3CCAA9DFB1256DDF /* PresetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsView.swift; sourceTree = "<group>"; };
 		3D031D31381585ECFC5ADABA /* MicroFreakEditorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFreakEditorApp.swift; sourceTree = "<group>"; };
 		3D920396FC6F228CC9CD4E3A /* MicroFreakModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFreakModel.swift; sourceTree = "<group>"; };
 		4191EC47714EAA87C537614F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		450BB2CD813AD19477D9AA9A /* MicroFreakParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFreakParameter.swift; sourceTree = "<group>"; };
 		4CB6A5BAC86B7578BD0EF832 /* CCMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapper.swift; sourceTree = "<group>"; };
+		4D24C2A8EF64363CAAC1F897 /* ParamSectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSectionCard.swift; sourceTree = "<group>"; };
 		4E1059A6DDF3AE804B2C8E98 /* MidiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiManager.swift; sourceTree = "<group>"; };
+		56EEC4A8E8B4BC0BB545F36C /* FilterAmpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAmpView.swift; sourceTree = "<group>"; };
 		5D40BB86F3BEE2185EB9A739 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		647A742108341CE01F40261D /* DetailHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHost.swift; sourceTree = "<group>"; };
 		97037681F112F8FE3C965CA1 /* NRPNMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRPNMapper.swift; sourceTree = "<group>"; };
+		97588FE457AFEB4400345932 /* SeqArpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeqArpView.swift; sourceTree = "<group>"; };
 		9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterRegistry.swift; sourceTree = "<group>"; };
 		B6B08EC2FBF0660DC2D5CAD6 /* Knob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 		BC683B5AA89E7AEAC47FF485 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		C1CEF454C92575FCE30D07E8 /* PresetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetStore.swift; sourceTree = "<group>"; };
 		C4E576794332B6E92A78C657 /* MicroFreakEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroFreakEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEB5CA8F2D32FACD4CCFCCE /* MicroFreakEditor-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MicroFreakEditor-iOS.entitlements"; sourceTree = "<group>"; };
 		D23D1EF4E66E90FA276543A5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModMatrixView.swift; sourceTree = "<group>"; };
 		E9FC155F1FFE631FD6EAE0BB /* DeviceSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSession.swift; sourceTree = "<group>"; };
 		F53E55745D683A0D35A9DB5B /* MicroFreakEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroFreakEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDDBAD648509D0E87EE258FE /* MidiSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		031CB72A18C796BF314BE74B /* FilterAmp */ = {
+			isa = PBXGroup;
+			children = (
+				56EEC4A8E8B4BC0BB545F36C /* FilterAmpView.swift */,
+			);
+			path = FilterAmp;
+			sourceTree = "<group>";
+		};
 		03CE62442E6077F11AEAD61A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				031CB72A18C796BF314BE74B /* FilterAmp */,
+				7273419B4DBCF229634843CF /* ModMatrix */,
+				08E9D68371E7C5C4FD1C8113 /* Oscillator */,
 				049551E0CA53D743040117F6 /* Perform */,
+				3C07DD342F06524FA654CFAC /* Presets */,
+				9314BD9B3CD2FB2616269E9C /* SeqArp */,
 				2E598C837597A01DE763BCF6 /* Settings */,
 			);
 			path = Screens;
@@ -83,6 +120,14 @@
 				3837A8C8A61DB0D78911822E /* PerformView.swift */,
 			);
 			path = Perform;
+			sourceTree = "<group>";
+		};
+		08E9D68371E7C5C4FD1C8113 /* Oscillator */ = {
+			isa = PBXGroup;
+			children = (
+				123C7478B9D6C00789494430 /* OscView.swift */,
+			);
+			path = Oscillator;
 			sourceTree = "<group>";
 		};
 		20FF414E5DC13867CFF59BA5 /* App */ = {
@@ -117,6 +162,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		3C07DD342F06524FA654CFAC /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				387436CD3CCAA9DFB1256DDF /* PresetsView.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
 		3C10547B88E5ADE910351244 /* MicroFreak */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +178,22 @@
 				9ABB02220EC3B69D7E0913D6 /* ParameterRegistry.swift */,
 			);
 			path = MicroFreak;
+			sourceTree = "<group>";
+		};
+		63B320ADC37321AFEFA25AB5 /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				C1CEF454C92575FCE30D07E8 /* PresetStore.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+		7273419B4DBCF229634843CF /* ModMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				D4F21FB317B0596CC7257E5B /* ModMatrixView.swift */,
+			);
+			path = ModMatrix;
 			sourceTree = "<group>";
 		};
 		72A6A476E40C4A66C4B491D8 /* MIDI */ = {
@@ -139,6 +208,7 @@
 		80BFC1C07659AD249C320FDA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C0180DFB20A8ED2F5C23FCCD /* Components */,
 				03CE62442E6077F11AEAD61A /* Screens */,
 				CDB34594976CC60A0B515269 /* Theme */,
 				647A742108341CE01F40261D /* DetailHost.swift */,
@@ -153,6 +223,14 @@
 				E9FC155F1FFE631FD6EAE0BB /* DeviceSession.swift */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		9314BD9B3CD2FB2616269E9C /* SeqArp */ = {
+			isa = PBXGroup;
+			children = (
+				97588FE457AFEB4400345932 /* SeqArpView.swift */,
+			);
+			path = SeqArp;
 			sourceTree = "<group>";
 		};
 		9F80E0C666623CD88F0D1121 /* CoreMIDI */ = {
@@ -178,6 +256,15 @@
 				4191EC47714EAA87C537614F /* SectionHeader.swift */,
 			);
 			path = PigmentsStyleControls;
+			sourceTree = "<group>";
+		};
+		C0180DFB20A8ED2F5C23FCCD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				34F62E3A55E743B842AB4E61 /* ParamKnobView.swift */,
+				4D24C2A8EF64363CAAC1F897 /* ParamSectionCard.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		CDB34594976CC60A0B515269 /* Theme */ = {
@@ -210,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				3C10547B88E5ADE910351244 /* MicroFreak */,
+				63B320ADC37321AFEFA25AB5 /* Presets */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -305,18 +393,26 @@
 				811021F1B7696418F153FF65 /* CCMapper.swift in Sources */,
 				EA093BD31B06CE70A4A4065A /* DetailHost.swift in Sources */,
 				2960D32D8A0B163DD295A997 /* DeviceSession.swift in Sources */,
+				9F936A9DC577FEB11F5B2C11 /* FilterAmpView.swift in Sources */,
 				26F92876FD0C2BD29E6DC5B8 /* Knob.swift in Sources */,
 				FF3965DABD96F87EA57BCCCF /* MicroFreakEditorApp.swift in Sources */,
 				88D3CDF8B5F75A9C29BEA960 /* MicroFreakModel.swift in Sources */,
 				8DF925445D45909080C22FDD /* MicroFreakParameter.swift in Sources */,
 				9A760682B4E41CD29CAD8D75 /* MidiManager.swift in Sources */,
 				33341BCFC4334F561C68A49E /* MidiSettingsView.swift in Sources */,
+				717857C3F814B3A168D3FE3A /* ModMatrixView.swift in Sources */,
 				DF02040D6F9A2602C6B11C05 /* NRPNMapper.swift in Sources */,
 				E2F7BA4BD14D37240DC44896 /* NavigationRouter.swift in Sources */,
+				6F047691DA847B97476E5F74 /* OscView.swift in Sources */,
+				75946A54C495B03E54031C1E /* ParamKnobView.swift in Sources */,
+				F33F3BBD1E9606FDB38B9D5E /* ParamSectionCard.swift in Sources */,
 				96643039C301573889BD8EC0 /* ParameterRegistry.swift in Sources */,
 				2E69F8661988DC11A0442DA6 /* PerformView.swift in Sources */,
+				230CAEBFA6A15A53A66DBF59 /* PresetStore.swift in Sources */,
+				7C97B9A1B86D36A0D374338C /* PresetsView.swift in Sources */,
 				352EBD596945C92F87543FD7 /* RootView.swift in Sources */,
 				34488620EE663FA4EBE79A9E /* SectionHeader.swift in Sources */,
+				0ABA41884538B5DA63A6408F /* SeqArpView.swift in Sources */,
 				1C8AE15E61B485AE9DB9E806 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,18 +425,26 @@
 				964D074030C36E7CEBC006FF /* CCMapper.swift in Sources */,
 				DD00ED4903895F2DB3FB8DCC /* DetailHost.swift in Sources */,
 				E6EB01DD7A7C4ABC8614437F /* DeviceSession.swift in Sources */,
+				33973CFB88C891A048983931 /* FilterAmpView.swift in Sources */,
 				70087D73075C72BC3E27BAF1 /* Knob.swift in Sources */,
 				A72589EBA87BB354AEDE11C8 /* MicroFreakEditorApp.swift in Sources */,
 				390962A89DE378036C106A23 /* MicroFreakModel.swift in Sources */,
 				D3EAC29E78E01021164D4377 /* MicroFreakParameter.swift in Sources */,
 				7CCDF698CF52A626E41B98D9 /* MidiManager.swift in Sources */,
 				51FBEA1264FCD80002320FA0 /* MidiSettingsView.swift in Sources */,
+				C4FC8C9E9B5FE6E9BEC236C6 /* ModMatrixView.swift in Sources */,
 				EA622ED8DDB4432A4D1863D7 /* NRPNMapper.swift in Sources */,
 				F22E53D66023DEB9737B00BD /* NavigationRouter.swift in Sources */,
+				86478E8120BBA9CC4F580BE4 /* OscView.swift in Sources */,
+				F9A5045006FBB5BFD01AF8BA /* ParamKnobView.swift in Sources */,
+				B02A56CBADE164AE049D058C /* ParamSectionCard.swift in Sources */,
 				55317D5263511F375EF192DE /* ParameterRegistry.swift in Sources */,
 				4601CEFAE6C9D3ED9CE0419F /* PerformView.swift in Sources */,
+				2E10A16FAB421AD6A3125F2B /* PresetStore.swift in Sources */,
+				B5AD7538B125F57293DAF342 /* PresetsView.swift in Sources */,
 				5B9A148A3C9A43E700231418 /* RootView.swift in Sources */,
 				90E996ADB48E76B72B83F617 /* SectionHeader.swift in Sources */,
+				0C6F5860BE7C8C356F731E04 /* SeqArpView.swift in Sources */,
 				56542B5ACE9A4176DCC3095A /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,11 +544,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FH4FKB9AUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MicroFreak Editor";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -458,7 +559,6 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.microfreakeditor.MicroFreakEditor;
 				PRODUCT_NAME = MicroFreakEditor;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -549,11 +649,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FH4FKB9AUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "MicroFreak Editor";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
@@ -567,7 +664,6 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.microfreakeditor.MicroFreakEditor;
 				PRODUCT_NAME = MicroFreakEditor;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				TARGETED_DEVICE_FAMILY = 2;
 			};

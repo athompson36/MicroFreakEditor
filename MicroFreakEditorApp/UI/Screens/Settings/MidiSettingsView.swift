@@ -7,6 +7,14 @@ struct MidiSettingsView: View {
 
     var body: some View {
         VStack(spacing: 12) {
+            GroupBox("Layout") {
+                Toggle("Compact mode (dense layout)", isOn: $app.isCompactMode)
+                    .toggleStyle(.switch)
+            }
+            .padding(12)
+            .background(RoundedRectangle(cornerRadius: Theme.corner).fill(Theme.cardBackground(scheme)))
+            .overlay(RoundedRectangle(cornerRadius: Theme.corner).stroke(Theme.stroke(scheme)))
+
             GroupBox("MIDI Ports") {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
